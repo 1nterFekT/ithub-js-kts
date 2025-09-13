@@ -13,15 +13,8 @@
  * "golf"
  */
 
-console.log("---\nTask 2");
-
 const temp = +prompt("Укажите температуру");
 const weather = prompt("Укажите погоду (clear/cloudy)");
 let activity;
-
-if (temp >= 25 && weather === "clear") activity = "golf";
-else if (temp >= 10 && temp <= 24 && weather === "cloudy") activity = "bowling";
-else if (!Number.isFinite(temp) || !["clear", "cloudy"].includes(weather)) activity = "(ошибка, температура или погода указаны неверно)";
-else activity = "hiking";
 
 console.log(activity);

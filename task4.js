@@ -11,8 +11,8 @@
  * 1
  */
 
-console.log("---\nTask #4");
-
 const word = prompt("Введите слово");
 const wordLength = word.length;
-let result;
+let result
+
+console.log(result)

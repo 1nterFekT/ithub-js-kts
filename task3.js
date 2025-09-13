@@ -25,21 +25,9 @@
  * Делить на 0 нельзя!
  */
 
-console.log("---\nTask #3");
-
 const a = +prompt("Число A");
 const b = +prompt("Число B");
 const sign = prompt("Операция (*/+-)");
 let result;
 
-switch (sign){
-    case "*":
-        result = a*b
-    case "/":
-        if (b === 0) result = "На ноль делить нельзя!"
-        else result = a/b
-    case "+":
-        result = a+b
-    case "-":
-        result = a-b
-}
+console.log(result)
