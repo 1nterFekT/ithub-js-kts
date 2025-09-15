@@ -13,14 +13,27 @@
  * 10000 Р в день
  */
 
-let price = +prompt("Введите доход");
-let range = prompt("Введите время (day/week/month)");
+let price = +prompt("Введите доход")
+if (!Number.isFinite(price)) {
+    throw new Error("Доход указан неверно!")
+}
+
+let range = prompt("Введите время (day/week/month)")
+if (range !== "day" && range !== "week" && range !== "month") {
+    throw new Error("Время указано неверно")
+} 
 
 price = price.toLocaleString("ru", {
     style: "currency",
     currency: "rub",
-    });
+})
 
-const result = `${price} в ${range}`;
+if (range === "day") {
+    range = "день"
+} else if (range === "week") {
+    range = "неделю"
+} else {
+    range = "месяц"
+}
 
-console.log(result);
+console.log(`${price} в ${range}`)

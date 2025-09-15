@@ -26,8 +26,39 @@
  */
 
 const a = +prompt("Число A");
+if (!Number.isFinite(a)) {
+    throw new Error("Число A указано неверно!")
+}
+
 const b = +prompt("Число B");
+if (!Number.isFinite(b)) {
+    throw new Error("Число B указано неверно!")
+}
+
 const sign = prompt("Операция (*/+-)");
+if (sign !== '*' && sign !== '/' && sign !== '+' && sign !== '-') {
+    throw new Error("Математическая операция указана неверно!")
+}
+
 let result;
+
+switch (sign) {
+    case '*':
+        result = a * b
+        break
+    case '+':
+        result = a + b
+        break
+    case '-':
+        result = a - b
+        break
+    case '/':
+        if (b === 0) {
+            throw new Error("На ноль делить нельзя!")
+        } else {
+            result = a / b
+        }
+        break
+}
 
 console.log(result)

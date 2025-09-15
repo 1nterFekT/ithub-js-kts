@@ -12,7 +12,6 @@
  */
 
 const word = prompt("Введите слово");
-const wordLength = word.length;
-let result
+const result = Math.sqrt(word.length) % 1 === 0 ? 1 : 0
 
 console.log(result)
